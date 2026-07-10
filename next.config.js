@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  turbopack: {
-    root: __dirname, // Force root to your project folder
-  },
-  outputFileTracingRoot: __dirname, // Fix tracing too
+  output: 'export', // ✅ Critical: generates static files
+  trailingSlash: true, // Fixes path/case issues
+  images: { unoptimized: true } // Required for static export
 };
 
 module.exports = nextConfig;
