@@ -3,6 +3,6 @@ const nextConfig = {
   output: 'export',
   trailingSlash: true,
   images: { unoptimized: true },
-  // basePath: '/YOUR-REPO-NAME' // UNCOMMENT & EDIT if NOT username.github.io
+  basePath: '' // Keep empty for custom domain brosbrain.co.uk
 };
 module.exports = nextConfig;
