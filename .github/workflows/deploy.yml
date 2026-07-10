@@ -1,6 +1,5 @@
 name: Deploy Next.js to GitHub Pages
 
-# Trigger when you push to main branch, or run manually
 on:
   push:
     branches: ["main"]
@@ -15,17 +14,21 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Get source code
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: "npm"
+
+      - name: Configure Yarn registry
+        run: |
+          yarn config set registry https://registry.npmjs.org/
+          yarn config set network-timeout 120000
 
       - name: Install dependencies
-        run: npm ci
+        run: yarn install --frozen-lockfile
 
       - name: Build static site
         run: npm run build
@@ -34,4 +37,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out # ✅ Uses ONLY what's inside /out
+          publish_dir: ./out
