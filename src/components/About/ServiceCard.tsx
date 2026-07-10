@@ -17,7 +17,7 @@ export default function ServiceCard({
   reverse = false,
 }: ServiceCardProps) {
   return (
-    <section className="group relative w-full bg-white py-12 md:py-16 overflow-hidden border-t border-gray-200">
+    <section className="group relative w-full  py-12 md:py-16 overflow-hidden border-t border-gray-200">
 
       {/* Subtle background network pattern */}
       <div className="absolute inset-0 opacity-5 pointer-events-none">
@@ -33,7 +33,7 @@ export default function ServiceCard({
       <div className={`max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16 ${reverse ? 'flex-row-reverse' : ''}`}>
         {/* Left / Title Side */}
         <div className="w-full md:w-1/2">
-          <h2 className="text-xl md:text-1xl lg:text-2xl font-bold text-gray-900 leading-tight">
+          <h2 className="text-xl md:text-1xl lg:text-2xl font-bold leading-tight">
             {title.split(' ').slice(0, -1).join(' ')}<br />
             {title.split(' ').slice(-1)}
           </h2>
@@ -65,7 +65,7 @@ export default function ServiceCard({
           <p className="text-gray-600 text-base md:text-lg mb-8 max-w-2xl leading-relaxed">
             {description}
           </p>
-          <Link
+          {/* <Link
             href={link}
             className="inline-flex items-center text-gray-900 font-semibold text-base hover:text-amber-600 transition-colors"
           >
@@ -73,7 +73,7 @@ export default function ServiceCard({
             <svg className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-          </Link>
+          </Link> */}
         </div>
   
       </div>

@@ -35,13 +35,13 @@ export default function AboutUs() {
         </div>
 
         {/* Section Footer Label */}
-        <div className="mt-20 text-center text-sm uppercase tracking-widest ">
+        {/* <div className="mt-20 text-center text-sm uppercase tracking-widest ">
           <p className="mb-4 text-xl font-bold "> Our Experts</p>
           <h1 className="mb-4 text-2xl font-bold py-5 ">Meet the Visionaries Driving Closeloop's Success</h1>
 
           <p>Our team embodies diversity, expertise, and a shared commitment to excellence.</p>
           <TeamSection />
-        </div>
+        </div> */}
 
         <ValuesSection />
       </div>

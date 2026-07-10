@@ -1,7 +1,8 @@
 import SectionTitle from "../Common/SectionTitle";
 import SingleFeature from "./SingleFeature";
+import WhyBrosbrain from "./Why";
 import featuresData from "./featuresData";
-
+import Teams from "./Teams";
 const Features = () => {
   return (
     <>
@@ -18,6 +19,7 @@ const Features = () => {
               <SingleFeature key={feature.id} feature={feature} />
             ))}
           </div>
+          <WhyBrosbrain/>
         </div>
       </section>
     </>

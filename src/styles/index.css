@@ -42,7 +42,12 @@ layer(base);
   --color-gray-950: #030712;
   --color-gray-dark: #1e232e;
   --color-gray-light: #f0f2f9;
-
+  --green: "#84CC16";
+           --yellow: "#FBBF24";
+           --purple: "#8B5CF6";
+           --red: "#EF4444";
+           --blue: "#94A3B8";
+           --dark: "#1E293B";
   --shadow-sign-up: 0px 5px 10px rgba(4, 10, 34, 0.2);
   --shadow-one: 0px 2px 3px rgba(7, 7, 77, 0.05);
   --shadow-two: 0px 5px 10px rgba(6, 8, 15, 0.1);

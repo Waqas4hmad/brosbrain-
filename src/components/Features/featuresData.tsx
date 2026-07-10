@@ -5,28 +5,21 @@ const featuresData: Feature[] = [
     id: 1,
     icon: (
      <svg
-  width="40"
+       width="40"
   height="40"
-  viewBox="0 0 40 40"
-  className="w-24 h-24 stroke-current"
-  xmlns="http://www.w3.org/2000/svg"
->
-  {/* Background */}
-  <path
-    opacity="0.5"
-    d="M6 4C4.9 4 4 4.9 4 6V26C4 27.1 4.9 28 6 28H20L26 34V28H34C35.1 28 36 27.1 36 26V6C36 4.9 35.1 4 34 4H6Z"
-  />
-
-  {/* Code Brackets */}
-  <path d="M15.4 11.8L10.8 16L15.4 20.2L16.8 18.8L13.8 16L16.8 13.2L15.4 11.8Z" />
-  <path d="M24.6 11.8L23.2 13.2L26.2 16L23.2 18.8L24.6 20.2L29.2 16L24.6 11.8Z" />
-
-  {/* Slash */}
-  <path d="M21.3 10H19.5L17 22H18.8L21.3 10Z" />
-
-  {/* Gear */}
-  <path d="M29.5 29.5L30.7 28.3L32.1 29.1L33.1 28.1L32.3 26.7L33.5 25.5L32.7 24.1L31 24.5C30.7 24.3 30.4 24.2 30.1 24L29.8 22.3H28.2L27.9 24C27.6 24.2 27.3 24.3 27 24.5L25.3 24.1L24.5 25.5L25.7 26.7L24.9 28.1L25.9 29.1L27.3 28.3L28.5 29.5L28.1 31.2H29.9L29.5 29.5ZM29 27.8C28.2 27.8 27.5 27.1 27.5 26.3C27.5 25.5 28.2 24.8 29 24.8C29.8 24.8 30.5 25.5 30.5 26.3C30.5 27.1 29.8 27.8 29 27.8Z" />
-</svg>
+      viewBox="0 0 40 40"
+      xmlns="http://www.w3.org/2000/svg"
+      className={`stroke-current `}
+      fill="none"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <rect x="4" y="4" width="32" height="32" rx="3" opacity="0.6" />
+      <path d="M14 16l-4 4 4 4" />
+      <path d="M26 16l4 4-4 4" />
+      <path d="M16 28l8-16" />
+    </svg>
     ),
     title: "CUSTOME SOFTWARE DEVELOPMENT",
     paragraph:

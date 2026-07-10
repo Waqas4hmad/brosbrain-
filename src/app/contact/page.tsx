@@ -4,8 +4,8 @@ import Contact from "@/components/Contact";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Contact Page for Startup Nextjs Template",
+  title: "Contact | Brosbrain",
+  description: "Brosbrain is a leading software development company that specializes in delivering innovative and high-quality solutions to clients worldwide. Our team of experienced developers, designers, and project managers work collaboratively to create custom software applications, web platforms, and mobile apps that meet the unique needs of our clients. We are committed to providing exceptional service, leveraging the latest technologies, and ensuring the success of every project we undertake.",
   // other metadata
 };
 
