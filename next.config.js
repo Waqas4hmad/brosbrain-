@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // ✅ Critical: generates static files
-  trailingSlash: true, // Fixes path/case issues
-  images: { unoptimized: true } // Required for static export
+  output: 'export',
+  trailingSlash: true,
+  images: { unoptimized: true },
+  // basePath: '/YOUR-REPO-NAME' // UNCOMMENT & EDIT if NOT username.github.io
 };
-
 module.exports = nextConfig;
