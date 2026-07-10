@@ -5,22 +5,24 @@ on:
     branches: ["main"]
   workflow_dispatch:
 
+# ✅ Required permissions — fixes 403 error
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write      # Allow pushing to gh-pages branch
+  pages: write         # Allow GitHub Pages deployment
+  id-token: write      # Required for verification
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout source code
         uses: actions/checkout@v4
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "20" # Match your local Node version
+          cache: "yarn"      # Use yarn since you use yarn
 
       - name: Configure Yarn registry
         run: |
@@ -38,3 +40,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
+          force_orphan: true # Optional: keeps only latest build on gh-pages
