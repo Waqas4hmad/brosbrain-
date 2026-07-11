@@ -18,7 +18,7 @@ const AboutPage = () => {
         description=""
       />
       <AboutSectionOne />
-      <AboutSectionTwo />
+      {/* <AboutSectionTwo /> */}
     </>
   );
 };

@@ -1,23 +1,10 @@
-import React from 'react';
 import Link from 'next/link';
+import { Service } from '@/data/services';
 
-type ServiceCardProps = {
-  title: string;
-  description: string;
-  image: string;
-  link: string;
-  reverse?: boolean; // for alternating layout
-};
-
-export default function ServiceCard({
-  title,
-  description,
-  image,
-  link,
-  reverse = false,
-}: ServiceCardProps) {
+export default function ServiceCard({ service,reverse }: { service: Service, reverse?: boolean }) {
   return (
-    <section className="group relative w-full  py-12 md:py-16 overflow-hidden border-t border-gray-200">
+    // <Link href={`/services/${service.slug}`} className="block h-full group">
+       <section className="group relative w-full  py-12 md:py-16 overflow-hidden border-t border-gray-200">
 
       {/* Subtle background network pattern */}
       <div className="absolute inset-0 opacity-5 pointer-events-none">
@@ -34,8 +21,8 @@ export default function ServiceCard({
         {/* Left / Title Side */}
         <div className="w-full md:w-1/2">
           <h2 className="text-xl md:text-1xl lg:text-2xl font-bold leading-tight">
-            {title.split(' ').slice(0, -1).join(' ')}<br />
-            {title.split(' ').slice(-1)}
+            {service.title.split(' ').slice(0, -1).join(' ')}<br />
+            {service.title.split(' ').slice(-1)}
           </h2>
         </div>
 
@@ -44,8 +31,8 @@ export default function ServiceCard({
           <div className="relative w-full max-w-xl md:max-w-2xl">
             <div className="clip-diagonal overflow-hidden">
               <img
-                src={image}
-                alt={title}
+                src={service.image}
+                alt={service.title}
                 className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
@@ -60,20 +47,20 @@ export default function ServiceCard({
         <div className="max-w-7xl mx-auto w-full ">
 
           <h2 className="text-1xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-6">
-            {title}
+            {service.title}
           </h2>
           <p className="text-gray-600 text-base md:text-lg mb-8 max-w-2xl leading-relaxed">
-            {description}
+            {service.shortDesc}
           </p>
-          {/* <Link
-            href={link}
+          <Link
+            href={`/services/${service.slug}`}
             className="inline-flex items-center text-gray-900 font-semibold text-base hover:text-amber-600 transition-colors"
           >
             Learn more
             <svg className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-          </Link> */}
+          </Link>
         </div>
   
       </div>

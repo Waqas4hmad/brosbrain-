@@ -4,7 +4,7 @@ import TeamSection from "./TeamSection";
 import ValuesSection from "./MissionVisionValues";
 export default function AboutUs() {
   return (
-    <section className="w-full py-20 bg-white text-gray-900 dark:bg-gray-dark dark:text-gray-100 transition-colors duration-300">
+    <section className="w-full pt-10 py-20 bg-white text-gray-900 dark:bg-gray-dark dark:text-gray-100 transition-colors duration-300">
       <div className="px-6 md:px-12 lg:px-20 xl:px-28 ">
 
 
