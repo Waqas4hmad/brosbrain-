@@ -1,35 +1,41 @@
-"use client";
-import Image from "next/image";
-import Link from "next/link";
+'use client';
+import Link from 'next/link';
+import { 
+  MapPin, Phone, Mail, ArrowRight
+} from 'lucide-react';
+import Image from 'next/image';
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
 
-const Footer = () => {
   return (
-    <>
-      <footer className="relative z-10 bg-white pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24">
-        <div className="container">
-          <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
-              <div className="mb-12 max-w-[360px] lg:mb-16">
-                <Link href="/" className="mb-8 inline-block">
+    <footer className=" text-gray-300 pt-20 pb-8">
+      <div className="container mx-auto px-5">
+        {/* Main Footer Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          
+          {/* Column 1: Logo & About */}
+          <div className="space-y-6">
+          <Link href="/" className="mb-8 inline-block">
                   <Image
                     src="/images/logo/logo1.png"
                     alt="logo"
-                    className="w-full dark:hidden"
-                    width={140}
-                    height={30}
+                    className="w-60 dark:hidden"
+                    width={80}
+                    height={20}
                   />
                   <Image
                     src="/images/logo/logo2.png"
                     alt="logo"
-                    className="hidden w-full dark:block"
-                    width={140}
-                    height={30}
+                    className="hidden w-60 dark:block"
+                    width={80}
+                    height={20}
                   />
                 </Link>
-                <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
+             <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
                   BrosBrain Ltd is a trusted technology partner delivering innovative software solutions, web and mobile application development, AI-powered products, cloud services, and IT consulting. We help businesses of all sizes accelerate digital transformation with reliable, scalable, and high-quality technology solutions.
                 </p>
-                <div className="flex items-center">
+            <div className="flex gap-4 pt-2">
+        <div className="flex items-center">
                   <a
                     href="/"
                     aria-label="social-link"
@@ -51,7 +57,7 @@ const Footer = () => {
                     </svg>
                   </a>
                   <a
-                    href="/"
+                    href="https://www.linkedin.com/company/brosbrain"
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -89,7 +95,7 @@ const Footer = () => {
                     </svg>
                   </a>
                   <a
-                    href="/"
+                    href="https://www.linkedin.com/company/brosbrain"
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -105,313 +111,96 @@ const Footer = () => {
                     </svg>
                   </a>
                 </div>
-              </div>
-            </div>
-
-            <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
-              <div className="mb-12 lg:mb-16">
-                <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Useful Links
-                </h2>
-                <ul>
-                  <li>
-                    <Link
-                      href="/blog"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Blog
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Pricing
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/about"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      About
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
-              <div className="mb-12 lg:mb-16">
-                <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Terms
-                </h2>
-                <ul>
-                  <li>
-                    <Link
-                      href="/"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      TOS
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/privacy"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Privacy Policy
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Refund Policy
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
-              <div className="mb-12 lg:mb-16">
-                <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Support & Help
-                </h2>
-                <ul>
-                  <li>
-                    <Link
-                      href="/contact"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Open Support Ticket
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/terms-conditions"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                     Terms and Conditions
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/about"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      About
-                    </Link>
-                  </li>
-                </ul>
-              </div>
             </div>
           </div>
 
-          <div className="h-px w-full bg-linear-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
-          <div className="py-8">
-            <p className="text-center text-base text-body-color dark:text-white">
-              Brosbrain Solution Ltd. &copy; {new Date().getFullYear()} All Rights Reserved
+          {/* Column 2: Our Services */}
+          <div>
+            <h4 className="text-black dark:text-white text-lg font-semibold mb-6 pb-2 border-b ">Our Services</h4>
+            <ul className="space-y-3">
+              {[
+                { name: 'Web Development', path: '/services/web-development' },
+                { name: 'Mobile App Development', path: '/services/mobile-apps' },
+                { name: 'UI/UX Design', path: '/services/ui-ux-design' },
+                { name: 'Custom Software', path: '/services/custom-software' },
+                { name: 'Cloud & DevOps', path: '/services/cloud-devops' },
+                { name: 'Digital Marketing', path: '/services/digital-marketing' },
+              ].map((service) => (
+                <li key={service.path}>
+                  <Link 
+                    href={service.path}
+                    className="flex items-center gap-2 hover:text-blue-400 transition-colors duration-300 group"
+                  >
+                    <ArrowRight className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                    <p className='text-black dark:text-white hover:text-blue-400' >{service.name}</p>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 3: Quick Links */}
+          <div>
+            <h4 className="text-black dark:text-white text-lg font-semibold mb-6 pb-2 border-b ">Quick Links</h4>
+            <ul className="space-y-3">
+              <li><Link href="/about" className="hover:text-blue-400 text-black dark:text-white">About Us</Link></li>
+              {/* <li><Link href="/projects" className="hover:text-blue-400 transition-colors">Our Projects</Link></li> */}
+              <li><Link href="/blog" className="hover:text-blue-400 transition-colors text-black dark:text-white">Blog & Insights</Link></li>
+              {/* <li><Link href="/careers" className="hover:text-blue-400 transition-colors">Careers</Link></li> */}
+              <li><Link href="/contact" className="hover:text-blue-400 transition-colors text-black dark:text-white">Contact Us</Link></li>
+              <li><Link href="/privacy-policy" className="hover:text-blue-400 transition-colors text-black dark:text-white">Privacy Policy</Link></li>
+              <li><Link href="/terms-conditions" className="hover:text-blue-400 transition-colors text-black dark:text-white">Terms & Conditions</Link></li>
+            </ul>
+          </div>
+
+          {/* Column 4: Contact & Map */}
+          <div className="space-y-6">
+            <h4 className="text-black dark:text-white text-lg font-semibold mb-6 pb-2 border-b ">Find Us</h4>
             
-            </p>
+            {/* Contact Info */}
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <MapPin className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
+                <span className='text-black dark:text-white'>618 Washwood Heath Rd, Birmingham<br />West Midlands, UK, B82 HG</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="w-5 h-5 text-blue-400 flex-shrink-0" />
+                <span className='text-black dark:text-white'>+44 745 536 6977</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Mail className="w-5 h-5 text-blue-400 flex-shrink-0" />
+                <span className='text-black dark:text-white'>hello@brosbrain.co.uk</span>
+              </div>
+            </div>
+
+            {/* Embedded Map */}
+            <div className="rounded-xl overflow-hidden border border-white/10 h-40">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38187.84001530903!2d-1.928775773267843!3d52.47766080379087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487040c692b4c73f%3A0x2e685ab44d7f0c7d!2sBirmingham%2C%20UK!5e0!3m2!1sen!2suk!4v1720715500000!5m2!1sen!2suk"
+                width="100%"
+                height="100%"
+                style={{ border: 0, filter: 'grayscale(80%) invert(92%) contrast(90%)' }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="BrosBrain Location Map"
+              />
+            </div>
           </div>
         </div>
-        <div className="absolute right-0 top-14 z-[-1]">
-          <svg
-            width="55"
-            height="99"
-            viewBox="0 0 55 99"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle opacity="0.8" cx="49.5" cy="49.5" r="49.5" fill="#959CB1" />
-            <mask
-              id="mask0_94:899"
-              style={{ maskType: "alpha" }}
-              maskUnits="userSpaceOnUse"
-              x="0"
-              y="0"
-              width="99"
-              height="99"
-            >
-              <circle
-                opacity="0.8"
-                cx="49.5"
-                cy="49.5"
-                r="49.5"
-                fill="#4A6CF7"
-              />
-            </mask>
-            <g mask="url(#mask0_94:899)">
-              <circle
-                opacity="0.8"
-                cx="49.5"
-                cy="49.5"
-                r="49.5"
-                fill="url(#paint0_radial_94:899)"
-              />
-              <g opacity="0.8" filter="url(#filter0_f_94:899)">
-                <circle cx="53.8676" cy="26.2061" r="20.3824" fill="white" />
-              </g>
-            </g>
-            <defs>
-              <filter
-                id="filter0_f_94:899"
-                x="12.4852"
-                y="-15.1763"
-                width="82.7646"
-                height="82.7646"
-                filterUnits="userSpaceOnUse"
-                colorInterpolationFilters="sRGB"
-              >
-                <feFlood floodOpacity="0" result="BackgroundImageFix" />
-                <feBlend
-                  mode="normal"
-                  in="SourceGraphic"
-                  in2="BackgroundImageFix"
-                  result="shape"
-                />
-                <feGaussianBlur
-                  stdDeviation="10.5"
-                  result="effect1_foregroundBlur_94:899"
-                />
-              </filter>
-              <radialGradient
-                id="paint0_radial_94:899"
-                cx="0"
-                cy="0"
-                r="1"
-                gradientUnits="userSpaceOnUse"
-                gradientTransform="translate(49.5 49.5) rotate(90) scale(53.1397)"
-              >
-                <stop stopOpacity="0.47" />
-                <stop offset="1" stopOpacity="0" />
-              </radialGradient>
-            </defs>
-          </svg>
-        </div>
-        <div className="absolute bottom-24 left-0 z-[-1]">
-          <svg
-            width="79"
-            height="94"
-            viewBox="0 0 79 94"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect
-              opacity="0.3"
-              x="-41"
-              y="26.9426"
-              width="66.6675"
-              height="66.6675"
-              transform="rotate(-22.9007 -41 26.9426)"
-              fill="url(#paint0_linear_94:889)"
-            />
-            <rect
-              x="-41"
-              y="26.9426"
-              width="66.6675"
-              height="66.6675"
-              transform="rotate(-22.9007 -41 26.9426)"
-              stroke="url(#paint1_linear_94:889)"
-              strokeWidth="0.7"
-            />
-            <path
-              opacity="0.3"
-              d="M50.5215 7.42229L20.325 1.14771L46.2077 62.3249L77.1885 68.2073L50.5215 7.42229Z"
-              fill="url(#paint2_linear_94:889)"
-            />
-            <path
-              d="M50.5215 7.42229L20.325 1.14771L46.2077 62.3249L76.7963 68.2073L50.5215 7.42229Z"
-              stroke="url(#paint3_linear_94:889)"
-              strokeWidth="0.7"
-            />
-            <path
-              opacity="0.3"
-              d="M17.9721 93.3057L-14.9695 88.2076L46.2077 62.325L77.1885 68.2074L17.9721 93.3057Z"
-              fill="url(#paint4_linear_94:889)"
-            />
-            <path
-              d="M17.972 93.3057L-14.1852 88.2076L46.2077 62.325L77.1884 68.2074L17.972 93.3057Z"
-              stroke="url(#paint5_linear_94:889)"
-              strokeWidth="0.7"
-            />
-            <defs>
-              <linearGradient
-                id="paint0_linear_94:889"
-                x1="-41"
-                y1="21.8445"
-                x2="36.9671"
-                y2="59.8878"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-              </linearGradient>
-              <linearGradient
-                id="paint1_linear_94:889"
-                x1="25.6675"
-                y1="95.9631"
-                x2="-42.9608"
-                y2="20.668"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0.51" />
-              </linearGradient>
-              <linearGradient
-                id="paint2_linear_94:889"
-                x1="20.325"
-                y1="-3.98039"
-                x2="90.6248"
-                y2="25.1062"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-              </linearGradient>
-              <linearGradient
-                id="paint3_linear_94:889"
-                x1="18.3642"
-                y1="-1.59742"
-                x2="113.9"
-                y2="80.6826"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0.51" />
-              </linearGradient>
-              <linearGradient
-                id="paint4_linear_94:889"
-                x1="61.1098"
-                y1="62.3249"
-                x2="-8.82468"
-                y2="58.2156"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-              </linearGradient>
-              <linearGradient
-                id="paint5_linear_94:889"
-                x1="65.4236"
-                y1="65.0701"
-                x2="24.0178"
-                y2="41.6598"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0.51" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
-      </footer>
-    </>
-  );
-};
 
-export default Footer;
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-sm text-gray-500">
+            © {currentYear} BrosBrain Tech. All rights reserved.
+          </p>
+          <div className="flex gap-6 text-sm">
+            <Link href="/privacy" className="text-gray-500 hover:text-blue-400 transition-colors">Privacy Policy</Link>
+            <Link href="/terms-conditions" className="text-gray-500 hover:text-blue-400 transition-colors">Terms & Conditions</Link>
+            {/* <Link href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38187.84001530903!2d-1.928775773267843!3d52.47766080379087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487040c692b4c73f%3A0x2e685ab44d7f0c7d!2sBirmingham%2C%20UK!5e0!3m2!1sen!2suk!4v1720715500000!5m2!1sen!2suk" className="text-gray-500 hover:text-blue-400 transition-colors">Sitemap</Link> */}
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
